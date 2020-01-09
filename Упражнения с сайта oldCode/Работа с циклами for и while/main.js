@@ -81,3 +81,68 @@ if(+numberString_2[0] + +numberString_2[1] + +numberString_2[2] == +numberString
 }else{
     console.log('Нет');
 }
+
+
+
+
+
+
+
+
+// Задачи на циклы while, for в JavaScript
+
+// Циклы while и for
+// Решите эти задачи сначала через цикл while, а затем через цикл for.
+
+// 1. Выведите столбец чисел от 1 до 100.
+
+for(let i = 1; i <= 100; i++){
+    document.write(i + '<br>');
+}
+
+let i = 1;
+while(i <= 100){
+    document.write(i + '<br>');
+    i++;
+}
+
+// 2.  Выведите столбец чисел от 11 до 33.
+
+for(let i = 11; i <= 33; i++){
+    document.write(i + '<br>');
+}
+
+let i_1 = 11;
+while(i_1 <= 33){
+    document.write(i_1 + '<br>');
+    i_1++;
+}
+
+// 3.  Выведите столбец четных чисел в промежутке от 0 до 100.
+
+for(let i = 0; i <= 100; i += 2){
+    document.write(i + '<br>');
+}
+
+let i_2 = 0;
+while(i_2 <= 100){
+    document.write(i_2 + '<br>');
+    i_2 = i_2 + 2;
+}
+
+// 4.  С помощью цикла найдите сумму чисел от 1 до 100.
+
+let summ = '';
+for (let i_3 = 0; i_3 <= 100; i_3++){
+    summ = i_3 * (i_3 + 1) / 2; // Данная формула (n*(n+1)/2) была взята с сайта.
+    console.log(summ);
+}
+
+let summ_2  = '';
+let i_4     = 0;
+
+while(i_4 < 100){
+    i_4++;
+    summ_2 = i_4 * (i_4 + 1) / 2;
+    console.log(summ_2);
+}
