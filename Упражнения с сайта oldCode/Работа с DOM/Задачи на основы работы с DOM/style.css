@@ -1,0 +1,15 @@
+.div
+{
+    height: 300px;
+    width: 300px;
+    border: 1px solid red;
+}
+
+#text{
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+input{
+    width: 200px;
+}
