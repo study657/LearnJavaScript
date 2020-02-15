@@ -1,0 +1,7 @@
+#elem{
+	width: 200px;
+	height: 200px;
+	padding: 30px;
+	border: 20px solid #BCBCBC;
+	overflow: auto;
+}
