@@ -1,0 +1,15 @@
+.notactive{
+    color: red;
+}
+
+.active{
+    color: green;
+}
+
+.activeNew{
+    background: red;
+}
+
+.blockTd{
+    display: none;
+}
