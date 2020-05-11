@@ -1,0 +1,89 @@
+/* 1. */
+/* #calc {
+    width: 200px;
+    padding: 2px;
+    padding-bottom: 4px;
+    border: 1px solid #000;
+    font-size: 0;
+    margin: 0 auto;
+    position: relative;
+}
+#display {
+    display: block;
+    width: 185px;
+    height: 30px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    margin: 4px;
+    text-align: right;
+    outline: 0;
+    background: #fff;
+    padding-right: 5px;
+}
+.button {
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #000;
+    margin: 4px;
+    font-size: 16px;
+    text-align: center;
+    transition: background .1s,
+    color .1s;
+}
+.button:hover {
+    background: #000;
+    color: #fff;
+}
+.button_C {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+} */
+
+
+
+/* 2. */
+/* #game {
+    width: 156px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    font-size: 0;
+}
+.cell {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-family: arial;
+    display: inline-block;
+    font-size: 26px;
+    border: 1px solid #000;
+    cursor: pointer;
+    vertical-align: middle;
+    transition: background .1s;
+}
+.cell:hover {
+    background: #eee;
+}
+#message {
+    text-align: center
+}
+#restart {
+    margin: 0 auto;
+    display: block;
+}
+#statistics {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: 1px solid;
+    padding: 0 20px;
+    display: inline-block;
+} */

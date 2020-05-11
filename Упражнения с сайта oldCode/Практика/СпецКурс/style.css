@@ -1,0 +1,251 @@
+/* 1. */
+/* td {
+    border: 1px solid black;
+    padding: 10px;
+} */
+
+
+
+/* 2. Клавиатура */
+/* .klaviatura{
+    width: 704px;
+    margin: 0 auto;
+}
+.klaviatura .row{
+	width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    clear: both;
+}
+.klaviatura .key{
+	width: 40px;
+    height: 40px;
+    float: left;
+    cursor: pointer;
+    color: #fff;
+    margin-left: 6px;
+    text-align: center;
+    line-height: 40px;
+	 background: linear-gradient(to top, #fce25b, #ecc92b);
+	box-shadow:
+	  -1px 0px rgb(220,195,35), -1px 1px rgb(192,167,7),
+	  -2px 1px rgb(219,194,34), -2px 2px rgb(191,166,6),
+	  -3px 2px rgb(218,193,33), -3px 3px rgb(190,165,5),
+	  -4px 3px rgb(217,192,32), -4px 4px rgb(189,164,4),
+	  -5px 4px rgb(216,191,31), -5px 5px rgb(188,163,3),
+	  -6px 5px rgb(215,190,30), -6px 6px rgb(187,162,2);
+}
+.klaviatura .key:hover{
+    background: #f9de53;
+}
+.klaviatura .backspace,.klaviatura .shift,.klaviatura .capslock{
+    width: 100px;
+}
+.klaviatura .capslock,.klaviatura .shift{
+color: #4e2f2f;
+}
+.klaviatura .tab{
+    width: 80px;
+}
+.klaviatura .space{
+    width: 300px;
+	margin-left: 206px;
+}
+.klaviatura sup{
+    margin: -10px 0 0 -24px;
+    font-size: 12px;
+    position: absolute;
+}
+#result{
+    width: 680px;
+    height: 80px;
+    margin: 0 auto;
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 10px;
+} */
+
+
+
+
+/* 4. Калькулятор */
+/* #calc {
+    width: 200px;
+    padding: 2px;
+    padding-bottom: 4px;
+    border: 1px solid #000;
+    font-size: 0;
+    margin: 0 auto;
+    position: relative;
+}
+#display {
+    display: block;
+    width: 185px;
+    height: 30px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    margin: 4px;
+    text-align: right;
+    outline: 0;
+    background: #fff;
+    padding-right: 5px;
+}
+.button {
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #000;
+    margin: 4px;
+    font-size: 16px;
+    text-align: center;
+    transition: background .1s,
+    color .1s;
+}
+.button:hover {
+    background: #000;
+    color: #fff;
+}
+.button_C {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+} */
+
+
+
+
+
+/* 1. Создание table */
+/* td{
+    padding: 50px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+} */
+
+
+
+
+/* 4. Крестики-нолики */
+/* #game {
+    width: 156px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    font-size: 0;
+}
+.cell {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-family: arial;
+    display: inline-block;
+    font-size: 26px;
+    border: 1px solid #000;
+    cursor: pointer;
+    vertical-align: middle;
+    transition: background .1s;
+}
+.cell:hover {
+    background: #eee;
+}
+#message {
+    text-align: center
+}
+#restart {
+    margin: 0 auto;
+    display: block;
+}
+#statistics {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: 1px solid;
+    padding: 0 20px;
+    display: inline-block;
+} */
+
+
+
+
+
+/* Лекция 9 */
+/* 1. */
+/* #elem{
+    display: none;
+} */
+
+
+
+
+/* Лекция 10 */
+/* 5. */
+/* #elem{
+    display: none;
+} */
+
+
+
+/* Лекция 12 */
+/* #calendar {
+    margin-top: 10px;
+    text-align: center;
+}
+.controls {
+    text-align: center;
+}
+.day {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 2px;
+    border: 1px solid #000;
+    text-align: center;
+}
+.day:first-child {
+    margin-left: 0px;
+}
+.day.today {
+    background: #000;
+    color: #fff;
+}
+#date {
+    margin-top: 10px;
+} */
+
+
+
+
+/* 18. */
+#calendar{
+    display: inline-block;
+}
+
+#calendar td, #calendar th{
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#calendar .nav, #calendar .info{
+    text-align: center;
+}
+
+#calendar a{
+    color: blue;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+#calendar a:hover{
+    color: red;
+}
