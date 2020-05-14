@@ -1,32 +1,25 @@
 // // Урок №1
-// // 1. Реализуйте калькулятор. Должны быть кнопки цифр и операций. По нажатию на кнопку '=' должен посчитаться результат. Совет: используйте метод eval
+// // 1. Реализуйте калькулятор. Должны быть кнопки цифр и операций. По нажатию на кнопку '=' должен посчитаться результат. Совет: используйте фунцию eval
 
+// let calc        = document.getElementById('calc');
 // let display     = document.getElementById('display');
 // let buttons     = document.getElementsByClassName('button');
-// let str         = '';
 
 // for(let i = 0; i < buttons.length; i++){
-//     buttons[i].addEventListener('click', startCalculetion);
-
-//     function startCalculetion(){
-//         let type = buttons[i].getAttribute('data-type');
-
-//         if(type == '='){
-//             str = eval(str);
-//             display.value = str;
-//         }else if(type == 'C'){
-//             str = '';
+//     buttons[i].addEventListener('click', function(){
+//         let atribute    = buttons[i].getAttribute('data-type');
+        
+//         if(atribute == 'C'){
+//             display.value   = '';
+//         }else if(atribute == '='){
+//             let sum = 0;
+//             sum = eval(display.value);
+//             display.value = sum;
 //         }else{
-//             str += type;
+//             display.value += atribute;
 //         }
-//         display.value = str;
-//     };
+//     });
 // }
-
-
-
-
-
 
 
 
@@ -34,133 +27,177 @@
 // // Урок №2
 // // 2. Реализуйте игру крестики-нолики. Играет два человека, на одном поле по очереди
 
-// let game		= document.getElementById('game');													// Первым делом получаем все элементы, которые есть на странице
-// let cell		= document.getElementsByClassName('cell');
+// function startGame(){
+//     let cell            = document.getElementsByClassName('cell');
+//     let message         = document.getElementById('message');
+//     let restart         = document.getElementById('restart');
 
-// let message		= document.getElementById('message');
+//     let win_x           = document.getElementById('win_x');
+//     let win_0           = document.getElementById('win_0');
+//     let win_draw        = document.getElementById('win_draw');
+//     let del             = document.getElementById('del');
 
-// let restart		= document.getElementById('restart');
-// let win_x		= document.getElementById('win_x');
-// let win_0		= document.getElementById('win_0');
-// let win_draw		= document.getElementById('win_draw');
+//     let paused          = false;
+//     let player          = 'X';
+//     let data            = [];
+//     let stepMoves       = 0;
 
-// let player		= 'x';                                  											// Вводим переменную с игроком, с которого начинается ход, но не забываем, что у нас два игрока, поэтому нужно добавить и второго
-// let paused		= false;																			// Вводим переменную, которая показывает нам в каком состоянии находится игра, т.е. если переменная имеет значение false, то игра еще не закончена, а именно победитель еще не определился
-// let data		= [];																				// Сюда будут записываться все ходы от х и от 0
-// let moveCounter	= 0;																				// Это счетчик наших ходов, так как если их будет 9 и нет победителя, то ничья
+//     let winIndex        = [
+//         [0, 1, 2],
+//         [3, 4, 5],
+//         [6, 7, 8],
+//         [0, 3, 6],
+//         [1, 4, 7],
+//         [2, 5, 8],
+//         [0, 4, 8],
+//         [2, 4, 6]
+//     ];
 
-// let win			= {																					// Создаем объект, в котором говорим о том, кто имеет какой счет, т.е. это нужно для будующего учета статистики побед х или 0 или ничей
-// 	x		: 0,
-// 	'0'		: 0,
-// 	draw	: 0
+//     wins                = {
+//         'X':        0,
+//         '0':        0,
+//         'draw':     0
+//     };
+
+
+//     for(let i = 0; i < cell.length; i++){
+//         cell[i].addEventListener('click', function(){
+//             if(!cell[i].innerHTML && !paused){
+//                 cell[i].innerHTML   = player;
+//                 let id              = cell[i].getAttribute('data-id');
+//                 data[id]            = player;
+//                 stepMoves++;
+
+//                 if(checkWin()){
+//                     message.innerHTML   = 'Выиграл: ' + player;
+//                     paused              = true;
+//                     wins[player]++;
+//                 }else{
+//                     changePlayerMove();
+//                 }
+
+//                 if(stepMoves >= 9){
+//                     message.innerHTML   = 'Ничья';
+//                     paused      = true;
+//                     stepMoves   = 0;
+//                     wins['draw']++;
+//                 }
+//                 updateStatistics();
+//             }
+//         });
+//     }
+
+//     function checkWin(){
+//         for(let i = 0; i < winIndex.length; i++){
+//             let id      = winIndex[i];
+//             let check   = data[id[0]] &&
+//                         data[id[0]] == data[id[1]] &&
+//                         data[id[1]] == data[id[2]];
+
+//             if(check){
+//                 return true;
+//             }
+//         }
+//         return false;
+//     };
+
+//     function changePlayerMove(){
+//         if(player == 'X'){
+//             player = '0';
+//         }else{
+//             player = 'X';
+//         }
+//         message.innerHTML   = 'Ходит: ' + player;
+//     };
+
+//     function updateStatistics(){
+//         win_x.innerHTML     = wins['X'];
+//         win_0.innerHTML     = wins['0'];
+//         win_draw.innerHTML  = wins['draw'];
+//     };
+
+//     restart.addEventListener('click', function(){
+//         for(let i = 0; i < cell.length; i++){
+//             cell[i].innerHTML   = '';
+//         }
+//         paused          = false;
+//         player          = 'X';
+//         data            = [];
+//         stepMoves       = 0;
+//         message.innerHTML   = 'Ходит: ' + player;
+//     });
+
+//     del.addEventListener('click', function(){
+//         for(let key in wins){
+//             wins[key]   = 0;
+//         }
+//         updateStatistics();
+//     });
 // };
-
-// let winIndex	= [																					// Здесь в массиве хранятся данные о том, какая комбинация ходов является выигрышной
-// 	[0, 1, 2],
-// 	[3, 4, 5],
-// 	[6, 7, 8],
-// 	[0, 3, 6],
-// 	[1, 4, 7],
-// 	[2, 5, 8],
-// 	[0, 4, 8],
-// 	[2, 4, 6]
-// ];
-
-
-// for(let i = 0; i < cell.length; i++){																// Навешиваем обработчик события по клику на каждую ячейку
-// 	cell[i].addEventListener('click', function(){
-// 		if(!cell[i].innerHTML && !paused){                                                          // Вводим проверку на то, что нажата на таже кнопочка, в которой уже есть значение какое-то, т.е. чей-то ход, а так же в каком состоянии находится игра. Если оба эти условия соблюдены, т.е. игра не в состоянии паузы и в ячейке нет хода, тогда делается следующее:
-// 			cell[i].innerHTML = player;																// В наши ячейки при клике записываем игрока, а именно кто ходит, начало с 'x'
-// 			let id		= cell[i].getAttribute('data-id');											// Вводится переменная id для того, чтобы затем по индексу созданного массива data записывать туда ходы от наших игроков х и 0
-// 			data[id] 	= player;																	// В массив data по индексу, который равен каждой нашей клеточки, что мы получили через атрибут, записываем все ходы игроков
-// 			moveCounter++;																			// Добавляем по 1 ходу, после каждого хода наших игроков, т.е. после их ходов делаем шаги на +1
-
-// 			if(checkWin()){																			// Далее определяется победитей, функция которой будет описана ниже, но данная функция проверяет победителя и выводит либо true либо false, соответственно если будет true и кто-то выиграл, то делаем следующее:
-// 				paused 		= true;																	// Нашу игру ставим в состояние паузы, чтобы нельзя было дальше тыкать по ячейкам и записывать новые события
-// 				moveCounter = 0;																	// Обнуляем наш счетчик ходов, т.к. он уже больше нам не нужен, потому что победитель определен
-// 				win[player]++;																		// В объект win по ключу player(а в player у нас пишется тот игрок, который ходит) мы должны записать выигрышное очко нашему победителю 
-// 				message.innerHTML = 'Выиграл: ' + player;											// Выводим сообщение для игроков,что победитель определен, давая понять, что он выиграл
-// 			}else{																					// Если победитель так и не был выявлен, т.е. функция наша на чек победы вернула false, тогда просто меняем игоков, запуская на это функцию
-// 				changePlayer();																		// Сюда, записывается функция 
-// 			}
-	
-// 			if(moveCounter >= 9){																	// Запускаем проверку, что если показатели нашего счетчика стали равны 9 ходам, а напоминаю в этой игре может быть не более 9 ходов и получается, если мы так и не выявили победителя, то при таком раскладе, делаем следующее:
-// 				paused = true;																		// Игра ставится сразу на паузу, т.к. произошла ничья
-// 				win['draw']++;																		// В объект с ключом draw, т.е. ничья, записываем +1 очко
-// 				message.innerHTML = 'Ничья';														// Выводим сообщение, что произошла ничья
-// 			}
-// 		}
-
-// 		updateStatistics();																			// Запускаем функцию (описание ниже) на то, чтобы наша статистика побед x или 0 или ничьи выводили в отдельном окошке
-// 	});
-// }
-
-// function checkWin(){																				// Функция для определения победителя
-// 	for(let i = 0; i < winIndex.length; i++){														// Запускается цикл, который перебирает все наши возможные варианты побед
-// 		let id 		= winIndex[i];																	// В переменную записываем каждый подмассив с победными тактиками
-// 		let ckeck	= data[id[0]] &&																// Далее создается переменная, которая возвращает либо true либо false. Получается идет проверка с массива data, где записываются ходы наших игроков, затем если выйдет так, что каждый из подмассива получит данные одного и того же значения, то переменная вернут true
-// 					  data[id[0]] == data[id[1]] &&
-// 					  data[id[1]] == data[id[2]];
-
-// 		if(ckeck){																					// Если переменная возвращает true, то функция возвращает true
-// 			return true;
-// 		}
-// 	}
-// 	return false;																					// Если переменная возвращает false, то функция вернет false, т.к. победитель пока что не определен
-// };
-
-// function changePlayer(){																			// Функция, которая меняет наших игроков после каждого хода
-// 	if(player == 'x'){
-// 		player = '0';
-// 	}else{
-// 		player = 'x'
-// 	}
-// 	message.innerHTML = 'Ходит: ' + player;
-// };
-
-// function updateStatistics(){																		// Функция, которая обновляет данные статистики, принимая данные с нашего объекта win и далее вынося их показатели в отдельную табличку
-// 	win_x.innerHTML 	= win['x'];
-// 	win_0.innerHTML		= win['0'];
-// 	win_draw.innerHTML	= win['draw'];
-// };
-
-
-// restart.addEventListener('click', function(){														// Вешаем обработчик события по клику на кнопку, которая начинает нашу игру с начала
-// 	for(let i = 0; i < cell.length; i++){															// Для этого запускается цикл по нашим ячейкам с ходами
-// 		cell[i].innerHTML = '';																		// Очищаем каждую ячейку с текущими ходами
-// 	}
-// 	data 		= [];																				// Очищаем наш массив с data
-// 	paused 		= false;																			// Снимаем паузу с нашей игры
-// 	player		= 'x';																				// Говорим, чтобы ход теперь начинался с x
-// 	moveCounter	= 0;																				// Ставим показатели шага наших ходов в 0
-// 	message.innerHTML = 'Ходит: ' + player;															// Выводим сообщение о том, кто из игроков ходит, в общем приводим все параметры в тот вид, который был с самого начала
-// });
-
-
-
-
-
+// startGame();
 
 
 
 
 // Урок №3
-// 3. Реализуйте тест с вопросами. В каждом вопросе есть 3 варианта ответов (один из них правильный) - это будет 3 радио кнопочек. 
+// 3. Реализуйте тест с вопросами. В каждом вопросе есть 5 вариантов ответов (один из них правильный) - это будет 5 радио кнопочек. 
 // После того, как человек ответит на все вопросы - покажите ему результат - на какие вопросы он ответил верно, не верно, не дал ответ. 
 // Покажите также процент правильно отвеченных вопросов
 
-let test		= document.getElementById('test');
-let question1	= document.getElementsByClassName('question')[0].getElementsByTagName('input');
-let question2	= document.getElementsByClassName('question')[1].getElementsByTagName('input');
-let question3	= document.getElementsByClassName('question')[2].getElementsByTagName('input');
-let question	= document.getElementsByClassName('question');
-let check		= document.getElementById('check');
-console.log(question1);
+var checkEl = document.getElementById('check');
+var questionsEl = document.getElementsByClassName('question');
+var result = [];
 
-let ans = '';
-for(let i = 0; i < question1.length; i++){
-    question1[i].addEventListener('click', function(){
-        ans = question1[i].hasAttribute('data-true');
-    });
+checkEl.addEventListener('click', checkAnswers);
+function checkAnswers() {
+    for (var i = 0; i < questionsEl.length; i++) {
+        var answers = questionsEl[i].querySelectorAll('input[type=radio]');
+        result.push( checkOneAnswer(answers) );
+    }
+    printResult();
+    result = [];
 }
-console.log(ans);
+
+function checkOneAnswer(answers) {
+    var result = null;
+    var noAnswer = true;
+    for (var i = 0; i < answers.length; i++) {
+        var isTrue = (answers[i].getAttribute('data-true') !== null);
+        if (answers[i].checked) {
+            noAnswer = false;
+            if (isTrue) {
+                result = true;
+            } else {
+                result = false;
+            }
+        } else {
+            if (isTrue) {
+                result = false;
+            }
+        }
+    }
+    if (noAnswer) {
+        result = null;
+    }
+    return result;
+}
+function printResult() {
+    var trueAnswers = 0;
+    var falseAnswers = 0;
+    var noAnswers = 0;
+    for (var i = 0; i < result.length; i++) {
+        if (result[i] === true) {
+            trueAnswers++;
+        } else if (result[i] === false) {
+            falseAnswers++;
+        } else if (result[i] === null) {
+            noAnswers++;
+        }
+    }
+    var all = trueAnswers + falseAnswers + noAnswers;
+    var percent = Math.round((trueAnswers/all) * 100);
+    var msg = 'Правильных ответов: ' + trueAnswers + ' (' + percent + '%)\n'
+        + 'Неправильных ответов: ' + falseAnswers + '\n'
+        + 'Без ответов: ' + noAnswers + '\n';
+    alert(msg);
+}
