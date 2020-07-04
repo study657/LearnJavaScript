@@ -1,0 +1,48 @@
+table{
+    border: 2px solid black;
+    width: 600px;
+}
+td{
+    border: 1px solid black;
+    text-align: center;
+}
+
+.active1{
+    text-decoration: line-through;
+}
+
+.active2{
+    background-color: green;
+}
+
+.hide{
+    display: none;
+}
+
+.active3{
+    background-color: red;
+}
+
+.active4{
+    background-color: green;
+}
+
+.active5{
+    background-color: red;
+}
+
+.color1{
+    background-color: green;
+}
+
+.color2{
+    background-color: red;
+}
+
+.color3{
+    background-color: purple;
+}
+
+.active{
+    background-color: green;
+}
