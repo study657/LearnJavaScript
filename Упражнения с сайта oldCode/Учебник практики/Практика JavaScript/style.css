@@ -1,0 +1,418 @@
+/* td{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.active1{
+    background-color: green;
+}
+
+.active2{
+    background-color: red;
+}
+
+.hiddenElems{
+    display: none;
+}
+
+#personSettings{
+    width: 410px;
+} */
+
+
+
+
+/* Экранная клавиатура на JavaScript */
+/* .klaviatura{
+    width: 704px;
+    margin: 0 auto;
+}
+.klaviatura .row{
+	width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    clear: both;
+}
+.klaviatura .key{
+	width: 40px;
+    height: 40px;
+    float: left;
+    cursor: pointer;
+    color: #fff;
+    margin-left: 6px;
+    text-align: center;
+    line-height: 40px;
+	 background: linear-gradient(to top, #fce25b, #ecc92b);
+	box-shadow:
+	  -1px 0px rgb(220,195,35), -1px 1px rgb(192,167,7),
+	  -2px 1px rgb(219,194,34), -2px 2px rgb(191,166,6),
+	  -3px 2px rgb(218,193,33), -3px 3px rgb(190,165,5),
+	  -4px 3px rgb(217,192,32), -4px 4px rgb(189,164,4),
+	  -5px 4px rgb(216,191,31), -5px 5px rgb(188,163,3),
+	  -6px 5px rgb(215,190,30), -6px 6px rgb(187,162,2);
+}
+.klaviatura .key:hover{
+    background: #f9de53;
+}
+.klaviatura .backspace,.klaviatura .shift,.klaviatura .capslock{
+    width: 100px;
+}
+.klaviatura .capslock,.klaviatura .shift{
+color: #4e2f2f;
+}
+.klaviatura .tab{
+    width: 80px;
+}
+.klaviatura .space{
+    width: 300px;
+	margin-left: 206px;
+}
+.klaviatura sup{
+    margin: -10px 0 0 -24px;
+    font-size: 12px;
+    position: absolute;
+}
+#result{
+    width: 680px;
+    height: 80px;
+    margin: 0 auto;
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 10px;
+}
+.active{
+    color: red;
+} */
+
+
+
+
+
+
+
+/* Калькулятор */
+/* #calc {
+    width: 200px;
+    padding: 2px;
+    padding-bottom: 4px;
+    border: 1px solid #000;
+    font-size: 0;
+    margin: 0 auto;
+    position: relative;
+}
+#display {
+    display: block;
+    width: 185px;
+    height: 30px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    margin: 4px;
+    text-align: right;
+    outline: 0;
+    background: #fff;
+    padding-right: 5px;
+}
+.button {
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #000;
+    margin: 4px;
+    font-size: 16px;
+    text-align: center;
+    transition: background .1s,
+    color .1s;
+}
+.button:hover {
+    background: #000;
+    color: #fff;
+}
+.button_C {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+}
+#result{
+    font-size: 10px;
+    text-align: center;
+} */
+
+
+
+
+/* Календарь */
+/* #calendar {
+    margin-top: 10px;
+    text-align: center;
+}
+.controls {
+    text-align: center;
+}
+.day {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 2px;
+    border: 1px solid #000;
+    text-align: center;
+    cursor: pointer;
+}
+.day:first-child {
+    margin-left: 0px;
+}
+.day.today {
+    background: #000;
+    color: #fff;
+}
+#date {
+    margin-top: 10px;
+} */
+
+
+
+
+/* Исторические события и гороскоп */
+/* *{
+	box-sizing: border-box;
+}
+#parent {
+	margin: 0 auto;
+	width: 600px;
+}
+#input {
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 10px;
+} */
+
+
+
+
+/* Сайт предсказаний */
+/* #parent {
+	text-align: center;
+}
+#parent > * {
+	margin-bottom: 10px;
+}
+
+#timer {
+	font-size: 18px;
+}
+#text {
+	font-size: 17px;
+	font-style: italic;
+}
+button {
+	padding: 5px 10px;
+	font-size: 15px;
+	cursor: pointer;
+}
+button:not(.active) {
+	display: none;
+} */
+
+
+
+
+/* Автодополнение */
+/* #parent {
+	position: relative;
+}
+#elem {
+	padding: 5px;
+	font-size: 18px;
+}
+
+#parent ul {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	background-color: white;
+}
+#parent li {
+	border: 1px solid gray;
+	font-size: 18px;
+	padding: 5px;
+}
+#parent li:hover {
+	border: 1px solid black;
+	cursor: pointer;
+} */
+
+
+
+
+/* Спойлер */
+/* .spoiler:not(.active) {
+	display: none;
+} */
+
+
+
+
+/* Вкладки Вариант1 */
+/* #parent {
+	margin: 0 auto;
+	width: 400px;
+}
+
+.menu a {
+	margin-right: 5px;
+	display: inline-block;
+	padding: 10px;
+	color: black;
+	text-decoration: none;
+	border: 1px solid gray;
+}
+.menu a:hover {
+	background: #f8f8f8;
+}
+.menu a.active {
+	border-color: transparent;
+	background: #f2f2f2;
+}
+
+.tabs .tab:not(.active) {
+	display: none;
+}
+.tabs .tab {
+	padding: 10px;
+	background: #f2f2f2;
+	height: 300px;
+} */
+
+
+
+
+/* Вкладки Вариант2 */
+/* #tabs {
+    width: 322px;
+    margin: 0 auto;
+    border: 2px solid #409D36;
+    border-radius: 10px;
+    padding: 15px;
+    font-family: Arial;
+}
+.tabs__list {
+    list-style-type: none;
+    padding-left: 0px;
+    margin: 0;
+    line-height: 33px;
+    display: inline-block;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #f5f3f0;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+.tabs__item {
+    display: inline-block;
+    color: #183e4c;
+    white-space: nowrap;   
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0px 13px;
+    background: #F5F3F0;
+    cursor: pointer;
+    border-radius: 7px 7px 0 0;
+    transition: all .2s;
+}
+.tabs__item.select {
+    color: #fff;
+    background: #409d36;
+}
+.tabs__text {
+    display: none;
+    font: 12px Arial;
+    text-align: justify;
+}
+.tabs__text.select {
+    display: block;
+} */
+
+
+
+
+/* Аккордион Вариант1 */
+/* #parent {
+	margin: 0 auto;
+	width: 400px;
+}
+.tab {
+	margin-bottom: 10px;
+}
+
+.tab .link a {
+	display: block;
+	padding: 10px;
+	color: black;
+	text-decoration: none;
+	text-align: center;
+	background: #f8f8f8;
+	border: 1px solid gray;
+}
+.tab .link:hover a {
+	background: #f2f2f2;
+}
+
+.tab:not(.active) .text {
+	display: none;
+}
+.tab .text {
+	border: 1px dashed gray;
+	border-top: none;
+	
+	padding: 10px;
+	height: 300px;
+} */
+
+
+
+
+/* Аккордион Вариант2 */
+#accordion {
+    margin: 10px 15%;
+}
+#accordion > h3 {
+    color: blue;
+    cursor: pointer;
+    margin: 5px 0;
+    padding: .5em .5em .5em .7em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    border: 1px solid #c5c5c5;
+    background: #f6f6f6;
+    font-weight: normal;
+    color: #454545;
+}
+#accordion > h3.select {
+    border: 1px solid #003eff;
+    background: #007fff;
+    font-weight: normal;
+    color: #ffffff;
+}
+#accordion > div {
+    height: 0;
+    overflow: hidden;
+    color: #333;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: height .5s;
+}
+.tabs__text {
+    font: 12px Arial;
+    text-align: justify;
+}
