@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Записная книжка</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="menu">
+            <ul id="notes">
+                <li>
+                    <span class="open">запись 1</span>
+                    <a href="#" class="remove">X</a>
+                </li>
+                <li>
+                    <span class="open">запись 2</span>
+                    <a href="#" class="remove">X</a>
+                </li>
+                <li>
+                    <span class="open">запись 3</span>
+                    <a href="#" class="remove">X</a>
+                </li>
+            </ul>
+            <div id="create">
+                <button>новая запись</button>
+            </div>
+        </div>
+        <div id="text">
+            <textarea></textarea>
+            <button  data-mode="create">Сохранить текст в новой записи</button>
+        </div>
+        <p id="info"></p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
