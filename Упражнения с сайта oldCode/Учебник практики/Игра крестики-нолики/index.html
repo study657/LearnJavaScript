@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Игра крестики-нолики</title>
+</head>
+<body>
+    <!-- <table id="field">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table> -->
+
+
+
+
+
+
+
+    <div id="game">
+		<div class="cell" data-id="0"></div>
+		<div class="cell" data-id="1"></div>
+		<div class="cell" data-id="2"></div>
+		<div class="cell" data-id="3"></div>
+		<div class="cell" data-id="4"></div>
+		<div class="cell" data-id="5"></div>
+		<div class="cell" data-id="6"></div>
+		<div class="cell" data-id="7"></div>
+		<div class="cell" data-id="8"></div>
+	</div> 
+	<p id="message">
+		Ходит: X
+	</p>
+	<input type="button" id="restart" value="Начать сначала">
+	<div id="statistics">
+		<p>
+			Выиграл <b>x</b>: <span id="win_x">0</span>
+		</p>
+		<p>
+			Выиграл <b>0</b>: <span id="win_0">0</span>
+		</p>
+		<p>
+			Ничья: <span id="win_draw">0</span>
+		</p>
+		<a href="#" id="resetStat">Сбросить статистику</a>
+	</div>
+
+    <script src="main.js"></script>
+</body>
+</html>
