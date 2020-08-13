@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Игра найди число</title>
+</head>
+<body>
+    <div id="parent">
+        <p id="info">Ваша задача пока тикает таймер найти и покрасить в красный цвет все числа по порядку, удачи;)</p>
+        <p id="question">Выберите время таймера до окончания игры:</p>
+        <select id="level">
+            <option value="90">90 секунд</option>
+            <option value="60">60 секунд</option>
+            <option value="40">40 секунд</option>
+        </select><br>
+        <button id="btn">Начать игру!</button>
+        <p class="timer"></p>
+        <table id="field"></table>
+        <p id="gameTimer"></p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
