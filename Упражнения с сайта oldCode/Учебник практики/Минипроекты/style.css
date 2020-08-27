@@ -1,0 +1,637 @@
+/* Калькулятор */
+/* #calc {
+    width: 200px;
+    padding: 2px;
+    padding-bottom: 4px;
+    border: 1px solid #000;
+    font-size: 0;
+    margin: 0 auto;
+    position: relative;
+}
+#display {
+    display: block;
+    width: 185px;
+    height: 30px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    margin: 4px;
+    text-align: right;
+    outline: 0;
+    background: #fff;
+    padding-right: 5px;
+}
+.button {
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #000;
+    margin: 4px;
+    font-size: 16px;
+    text-align: center;
+    transition: background .1s,
+    color .1s;
+}
+.button:hover {
+    background: #000;
+    color: #fff;
+}
+.button_C {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+} */
+
+
+
+
+/* Игра крестики-нолики */
+/* #game {
+    width: 156px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    font-size: 0;
+}
+.cell {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-family: arial;
+    display: inline-block;
+    font-size: 26px;
+    border: 1px solid #000;
+    cursor: pointer;
+    vertical-align: middle;
+    transition: background .1s;
+}
+.cell:hover {
+    background: #eee;
+}
+#message {
+    text-align: center
+}
+#restart {
+    margin: 0 auto;
+    display: block;
+}
+#statistics {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: 1px solid;
+    padding: 0 20px;
+    display: inline-block;
+} */
+
+
+
+
+/* Тест с вопросами №2 */
+/* #check {
+    display: none;
+} */
+
+
+
+
+/* Опрос */
+/* #result {
+    display: none;
+}
+#again {
+    display: none;
+} */
+
+
+
+
+/* Чеклист */
+/* #checklist {
+    border: 1px solid;
+    width: 350px;
+    margin: 0 auto;
+}
+#addItem {
+    width: 330px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border: 1px solid;
+    padding: 5px;
+}
+.item {
+    border-top: 1px solid;
+    position: relative;
+}
+.item .checkbox {
+    position: absolute;
+    left: 3px;
+    top: 10px;
+}
+.item .text {
+    margin-left: 25px;
+    background: #fff;
+    color: #000;
+    width: 310px;
+    padding: 5px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+.item .edit {
+    display: none;
+}
+.item.edit .text {
+    display: none;
+}
+.item.edit .edit {
+    display: block;
+    border: 1px solid #000;
+    background: #eee;
+    margin-left: 25px;
+    outline: none;
+    color: #000;
+    width: 275px;
+    padding: 5px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+.item.complete {
+    text-decoration: line-through;
+}
+.item.complete .checkbox {
+    display: none;
+}
+.item .remove {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    color: #c00;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 50%;
+    font-family: Arial;
+    cursor: pointer;
+    border: 1px solid;
+    background: none;
+    outline: none;
+}
+.item:hover .remove:hover {
+    color: red;
+} */
+
+
+
+
+/* Автодополнение */
+/* input[type=text] {
+    margin: 5px;
+    padding: 5px;
+    outline: 0px;
+    width: 200px;
+}
+#autocomplite_list {
+    display: none;
+    position: absolute;
+    width: 212px;
+    left: 12.9802px;
+    top: 42.1485px;
+    border: 1px solid rgb(150,150,150);
+    z-index: 999999999999999999;
+    background: #fff;
+    max-height: 250px;
+    overflow: auto;
+    margin-top: 1px;
+}
+#autocomplite_list div:hover {
+    background: #eee;
+    cursor: pointer;
+} */
+
+
+
+
+/* Игра лесенка */
+/* #timer {
+    min-height: 50px;
+    text-align: center;
+}
+#game_table {
+    border: 1px solid #000;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+#start {
+    margin: 0 auto;
+    display: block;
+}
+#restart {
+    display: none;
+    margin: 20px auto;
+}
+td {
+    width: 50px;
+    height: 50px;
+    line-height: 30px;
+    font-weight: bold;
+    border: 1px solid #000;
+    text-align: center;
+    border-radius: 2px;
+    cursor: pointer;
+}
+td.select {
+    background: #c00;
+} */
+
+
+
+
+/* Попап при прокрутке страницы */
+/* html, body {
+    margin: 0;
+    height: 100%;
+}
+#modalwin {
+    position: fixed;
+    overflow: auto;
+    z-index: 9999999999;
+    background-color: #fff;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,.2);
+    outline: 0;
+    padding: 25px;
+    display: none;
+    border-radius: 6px;
+    background-clip: padding-box;
+    -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    transition: opacity .25s ease-out .2s;
+}
+#exit {
+    margin-top: -4px;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: .2;
+    -webkit-appearance: none;
+}
+#exit:hover {
+    opacity: .5;
+}
+#exit:after {
+    content: '×';
+} */
+
+
+
+
+/* Попап при истечении времени */
+/* html, body {
+    margin: 0;
+    height: 100%;
+}
+#modalwin {
+    position: fixed;
+    overflow: auto;
+    z-index: 9999999999;
+    background-color: #fff;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,.2);
+    outline: 0;
+    padding: 25px;
+    display: none;
+    border-radius: 6px;
+    background-clip: padding-box;
+    -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    transition: opacity .25s ease-out .2s;
+}
+#exit {
+    margin-top: -4px;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: .2;
+    -webkit-appearance: none;
+}
+#exit:hover {
+    opacity: .5;
+}
+#exit:after {
+    content: '×';
+} */
+
+
+
+
+/* Прямой календарик */
+/* #calendar {
+    margin-top: 10px;
+    text-align: center;
+}
+.controls {
+    text-align: center;
+}
+.day {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 2px;
+    border: 1px solid #000;
+    text-align: center;
+}
+.day:first-child {
+    margin-left: 0px;
+}
+.day.today {
+    background: #000;
+    color: #fff;
+}
+#date {
+    margin-top: 10px;
+} */
+
+
+
+
+/* Органайзер */
+#calendar {
+    border: 1px solid #000;
+    width: 252px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+#tasks {
+    width: 248px;
+    margin: 10px auto;
+    display: block;
+    min-height: 100px;
+    display: none;
+}
+#date {
+    margin: 10px;
+}
+.buttons {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+}
+.button {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+.day {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin: 2px;
+    padding: 0 1px;
+    border: 1px solid transparent;
+    margin-right: 11px;
+    text-align: center;
+    cursor: pointer;
+    transition: background .1s, color .1s;
+}
+.day:hover {
+    border: 1px solid #000!important;
+    color: #fff;
+    background: #000!important;
+}
+.day.today {
+    border: 1px solid #000!important;
+    color: #fff;
+    background: #000!important;
+}
+.day.other {
+    visibility: hidden;
+}
+.day.task {
+    border-color: #aaa;
+}
+.day.active {
+    background: #eee;
+    border-color: #aaa;
+}
+.daysName {
+    background: #ddd;
+    border-bottom: 1px solid #999;
+    border-top: 1px solid #999;
+    margin-right: -9px;
+}
+#days {
+    margin-right: -9px;
+}
+.daysName div {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin: 2px;
+    margin-right: 11px;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+
+
+
+/* Чеклист совмещенный с органайзером */
+#checklist {
+    border: 1px solid;
+    width: 350px;
+    margin: 0 auto;
+}
+#addItem {
+    width: 330px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border: 1px solid;
+    padding: 5px;
+}
+.item {
+    border-top: 1px solid;
+    position: relative;
+}
+.item .checkbox {
+    position: absolute;
+    left: 3px;
+    top: 10px;
+}
+.item .text {
+    margin-left: 25px;
+    background: #fff;
+    color: #000;
+    width: 310px;
+    padding: 5px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+.item .edit {
+    display: none;
+}
+.item.edit .text {
+    display: none;
+}
+.item.edit .edit {
+    display: block;
+    border: 1px solid #000;
+    background: #eee;
+    margin-left: 25px;
+    outline: none;
+    color: #000;
+    width: 275px;
+    padding: 5px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+.item.complete {
+    text-decoration: line-through;
+}
+.item.complete .checkbox {
+    display: none;
+}
+.item .remove {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    color: #c00;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 50%;
+    font-family: Arial;
+    cursor: pointer;
+    border: 1px solid;
+    background: none;
+    outline: none;
+}
+.item:hover .remove:hover {
+    color: red;
+}
+
+#save{
+    width: 330px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+
+
+
+/* Вкладки */
+/* #tabs {
+    width: 322px;
+    margin: 0 auto;
+    border: 2px solid #409D36;
+    border-radius: 10px;
+    padding: 15px;
+    font-family: Arial;
+}
+.tabs__list {
+    list-style-type: none;
+    padding-left: 0px;
+    margin: 0;
+    line-height: 33px;
+    display: inline-block;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #f5f3f0;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+.tabs__item {
+    display: inline-block;
+    color: #183e4c;
+    white-space: nowrap;   
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0px 13px;
+    background: #F5F3F0;
+    cursor: pointer;
+    border-radius: 7px 7px 0 0;
+    transition: all .2s;
+}
+.tabs__item.select {
+    color: #fff;
+    background: #409d36;
+}
+.tabs__text {
+    display: none;
+    font: 12px Arial;
+    text-align: justify;
+}
+.tabs__text.select {
+    display: block;
+} */
+
+
+
+
+/* Аккордион */
+/* #accordion {
+    margin: 10px 15%;
+}
+#accordion > h3 {
+    color: blue;
+    cursor: pointer;
+    margin: 5px 0;
+    padding: .5em .5em .5em .7em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    border: 1px solid #c5c5c5;
+    background: #f6f6f6;
+    font-weight: normal;
+    color: #454545;
+}
+#accordion > h3.select {
+    border: 1px solid #003eff;
+    background: #007fff;
+    font-weight: normal;
+    color: #ffffff;
+}
+#accordion > div {
+    height: 0;
+    overflow: hidden;
+    color: #333;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: height .5s;
+}
+.tabs__text {
+    font: 12px Arial;
+    text-align: justify;
+} */
