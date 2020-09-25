@@ -1,0 +1,46 @@
+.catalog{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    &-product{
+        width: 30%;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border: 1px solid black;
+
+        img{
+            width: 45%;
+
+        }
+        h3{
+            font-size: 35px;
+            cursor: pointer;
+        }
+        .popup{
+            display: none;
+            font-size: 20px;
+        }
+        p{
+            font-size: 25px;
+        }
+        .button{
+            padding: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-color: green;
+            font-size: 28px;
+            cursor: pointer;
+        }
+        &.wish{
+            border-top: 2px solid red;
+        }
+    }
+}
