@@ -129,12 +129,14 @@ let iPhone7         = new ProductCardSale('iPhone 7 256GB', 60000, 'Устерв
 let GalaxyNote9     = new ProductCard('Galaxy Note 9', 90000, 'Новый телефон, Galaxy. Все как вы любите!', 'images/galaxy.jpg');
 let galaxy8         = new ProductCardSale('Galaxy 8', 10000, 'Устервший Galaxy 8, но стабильный и надежный аппарат, к тому же по привлекательной цене!', 'images/galaxy8.jpg', 20);
 let iPhone20        = new ProductCardPreOrder('iPhone 20', 200000, 'Самая последняя модель iPhone, которая выйдет в 2021 году!', 'images/iphone.jpg', '2021');
+let iPhone8         = new ProductCard('iPhone 8', 80000, 'Самая стабильная и прочная модель iPhone 8', 'images/iPhone8.jpg');
 
 catalog.append(iPhoneXs.renderElement());
 catalog.append(iPhone7.renderElement());
 catalog.append(GalaxyNote9.renderElement());
 catalog.append(galaxy8.renderElement());
 catalog.append(iPhone20.renderElement());
+catalog.append(iPhone8.renderElement());
 
 // iphone.buy();
 // galaxy.buy();
