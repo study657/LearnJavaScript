@@ -145,145 +145,318 @@
 
 
 
-// ВТОРОЙ ВАРИАНТ РЕШЕНИЯ БЕЗ ООП (МОЙ ВАРИАНТ)
+// // ВТОРОЙ ВАРИАНТ РЕШЕНИЯ БЕЗ ООП (МОЙ ВАРИАНТ)
+
+// let game        = document.getElementById('game');
+// let field       = game.querySelector('.field');
+// let rowsNum     = 30;
+// let collsNum    = 20;
+// let gamers      = ['gamer1', 'gamer2'];
+// let gamerNum    = 0;
+
+// function createTable(field){
+//     for(let i = 1; i <= rowsNum; i++){
+//         let tr      = document.createElement('tr');
+//         tr.dataset.numRow   = i - 1;
+//         field.append(tr);
+
+//         for(let j = 1; j <= collsNum; j++){
+//             let td  = document.createElement('td');
+//             td.dataset.numColl  = j - 1;
+//             tr.append(td);
+
+//             td.addEventListener('click', function eventTds(){
+//                 this.classList.add(gamers[gamerNum]);
+//                 let className       = this.className;
+//                 let numColl         = Number(this.dataset.numColl);
+//                 let numRow          = Number(this.parentElement.dataset.numRow);
+//                 gamerNum++;
+            
+//                 if(gamerNum == gamers.length){
+//                     gamerNum = 0;
+//                 }
+//                 this.removeEventListener('click', eventTds);
+
+//                 let gorizontalArr       = getArrFromGorizontal(this);
+//                 let verticalArr         = getArrFromVertical(game, numColl);
+//                 let firstDiagoArr       = getArrFromFirstDiago(numRow, numColl);
+//                 let secondDiagoArr      = getArrFromSecondDiago(numRow, numColl);
+
+//                 if(checkWin(gorizontalArr, className) || checkWin(verticalArr, className) || checkWin(firstDiagoArr, className) || checkWin(secondDiagoArr, className)){
+//                     alert('Победил игрок: ' + className);
+//                 }
+//             });
+//         }
+//     }
+// };
+// createTable(field);
+
+// function checkWin(arr, className){
+//     let str     = arr.join('');
+//     let reg     = new RegExp("^\.{1,}" + "(?:" + className + "){5}\.{1,}|(?:" + className + "){5}\.{1,}|\.{1,}(?:" + className + "){5,}$");
+
+//     return reg.test(str);
+// };
+
+// function getArrFromGorizontal(elem){
+//     let result  = [];
+//     let elems   = elem.parentElement.children;
+//     for(let i = 0; i < elems.length; i++){
+//         if(elems[i].className == ''){
+//             result.push('-');
+//         }else{
+//             result.push(elems[i].className);
+//         }
+//     }
+//     return result;
+// };
+
+// function getArrFromVertical(parent, numColl){
+//     let result  = [];
+//     let elems   = parent.querySelectorAll('tr');
+
+//     for(let i = 0; i < elems.length; i++){
+//         if(elems[i].children[numColl].className == ''){
+//             result.push('-');
+//         }else{
+//             result.push(elems[i].children[numColl].className);
+//         }
+//     }
+//     return result;
+// };
+
+// function getArrFromFirstDiago(numberRow, numberColl){
+//     let arr     = [];
+//     let result  = [];
+
+//     for(let i = 0; i <= 20; i++){
+//         if(field.querySelectorAll('tr')[numberRow] != undefined && field.querySelectorAll('tr')[numberRow].children[numberColl] != undefined){
+//             arr.push(field.querySelectorAll('tr')[numberRow].children[numberColl]);
+//             numberRow--;
+//             numberColl++;
+//         }
+//     }
+
+//     let firstElem   = arr[arr.length - 1];
+//     let newNumCol   = Number(firstElem.dataset.numColl);
+//     let newNumRow   = Number(firstElem.parentElement.dataset.numRow);
+    
+//     for(let i = 0; i <= 30; i++){
+//         if(field.querySelectorAll('tr')[newNumRow] != undefined && field.querySelectorAll('tr')[newNumRow].children[newNumCol] != undefined){
+//             if(field.querySelectorAll('tr')[newNumRow].children[newNumCol].className == ''){
+//                 result.push('-');
+//             }else{
+//                 result.push(field.querySelectorAll('tr')[newNumRow].children[newNumCol].className);
+//             }
+
+//             newNumRow++;
+//             newNumCol--;
+//         }
+//     }
+
+//     return result;
+// };
+
+// function getArrFromSecondDiago(numberRow, numberColl){
+//     let arr     = [];
+//     let result  = [];
+//     for(let i = 0; i <= 20; i++){
+//         if(field.querySelectorAll('tr')[numberRow] != undefined && field.querySelectorAll('tr')[numberRow].children[numberColl] != undefined){
+//             arr.push(field.querySelectorAll('tr')[numberRow].children[numberColl]);
+
+//             numberRow--;
+//             numberColl--;
+//         }
+//     }
+
+//     let firstElem    = arr[arr.length - 1];
+//     let newNumCol2   = Number(firstElem.dataset.numColl);
+//     let newNumRow2   = Number(firstElem.parentElement.dataset.numRow);
+
+//     for(let i = 0; i <= 30; i++){
+//         if(field.querySelectorAll('tr')[newNumRow2] != undefined && field.querySelectorAll('tr')[newNumRow2].children[newNumCol2] != undefined){
+//             if(field.querySelectorAll('tr')[newNumRow2].children[newNumCol2].className == ''){
+//                 result.push('-');
+//             }else{
+//                 result.push(field.querySelectorAll('tr')[newNumRow2].children[newNumCol2].className);
+//             }
+
+//             newNumCol2++;
+//             newNumRow2++;
+//         }
+//     }
+//     return result;
+// };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ПЕРВЫЙ ВАРИАНТ РЕШЕНИЯ С ООП (МОЙ ВАРИАНТ)
 
 let game        = document.getElementById('game');
 let field       = game.querySelector('.field');
-let rowsNum     = 30;
-let collsNum    = 20;
-let gamers      = ['gamer1', 'gamer2'];
-let gamerNum    = 0;
 
-function createTable(field){
-    for(let i = 1; i <= rowsNum; i++){
-        let tr      = document.createElement('tr');
-        tr.dataset.numRow   = i - 1;
-        field.append(tr);
+class Field{
+    constructor(game, parent, rowsNum, collsNum){
+        this.game       = game;
+        this.parent     = parent;
+        this.rowsNum    = rowsNum;
+        this.collsNum   = collsNum;
 
-        for(let j = 1; j <= collsNum; j++){
-            let td  = document.createElement('td');
-            td.dataset.numColl  = j - 1;
-            tr.append(td);
+        this.gamers     = ['gamer1', 'gamer2'];
+        this.gamerNum   = 0;
 
-            td.addEventListener('click', function eventTds(){
-                this.classList.add(gamers[gamerNum]);
-                let className       = this.className;
-                let numColl         = Number(this.dataset.numColl);
-                let numRow          = Number(this.parentElement.dataset.numRow);
-                gamerNum++;
-            
-                if(gamerNum == gamers.length){
-                    gamerNum = 0;
-                }
-                this.removeEventListener('click', eventTds);
+        this.createTable();
 
-                let gorizontalArr       = getArrFromGorizontal(this);
-                let verticalArr         = getArrFromVertical(game, numColl);
-                let firstDiagoArr       = getArrFromFirstDiago(numRow, numColl);
-                let secondDiagoArr      = getArrFromSecondDiago(numRow, numColl);
+        this.logic      = new LogiсGame();
+    };
 
-                if(checkWin(gorizontalArr, className) || checkWin(verticalArr, className) || checkWin(firstDiagoArr, className) || checkWin(secondDiagoArr, className)){
-                    alert('Победил игрок: ' + className);
-                }
-            });
+    createTable(){
+        for(let i = 1; i <= this.rowsNum; i++){
+            let tr      = document.createElement('tr');
+            tr.dataset.numRow   = i - 1;
+            this.parent.append(tr);
+
+            for(let j = 1; j <= this.collsNum; j++){
+                let td  = document.createElement('td');
+                td.dataset.numColl  = j - 1;
+                tr.append(td);
+
+                let self       = this;
+
+                td.addEventListener('click', function eventTds(){
+                    td.classList.add(self.gamers[self.gamerNum]);
+                    let className       = this.className;
+                    let numColl         = Number(this.dataset.numColl);
+                    let numRow          = Number(this.parentElement.dataset.numRow);
+                    self.gamerNum++;
+                
+                    if(self.gamerNum == self.gamers.length){
+                        self.gamerNum = 0;
+                    }
+                    this.removeEventListener('click', eventTds);
+
+                    this.gorizontalArr      = self.logic.getArrFromGorizontal(this);
+                    this.verticalArr        = self.logic.getArrFromVertical(self.game, numColl);
+                    this.firstDiagoArr      = self.logic.getArrFromFirstDiago(numRow, numColl);
+                    this.secondDiagoArr     = self.logic.getArrFromSecondDiago(numRow, numColl);
+
+                    if(self.logic.checkWin(this.gorizontalArr, className) || self.logic.checkWin(this.verticalArr, className) || self.logic.checkWin(this.firstDiagoArr, className) || self.logic.checkWin(this.secondDiagoArr, className)){
+                        alert('Победил игрок: ' + className);
+                    }
+                });
+            }
         }
-    }
-};
-createTable(field);
-
-function checkWin(arr, className){
-    let str     = arr.join('');
-    let reg     = new RegExp("^\.{1,}" + "(?:" + className + "){5}\.{1,}|(?:" + className + "){5}\.{1,}|\.{1,}(?:" + className + "){5,}$");
-
-    return reg.test(str);
-};
-
-function getArrFromGorizontal(elem){
-    let result  = [];
-    let elems   = elem.parentElement.children;
-    for(let i = 0; i < elems.length; i++){
-        if(elems[i].className == ''){
-            result.push('-');
-        }else{
-            result.push(elems[i].className);
-        }
-    }
-    return result;
+    };
 };
 
-function getArrFromVertical(parent, numColl){
-    let result  = [];
-    let elems   = parent.querySelectorAll('tr');
+class LogiсGame{
+    checkWin(arr, className){
+        let str     = arr.join('');
+        let reg     = new RegExp("^\.{1,}" + "(?:" + className + "){5}\.{1,}|(?:" + className + "){5}\.{1,}|\.{1,}(?:" + className + "){5,}$");
 
-    for(let i = 0; i < elems.length; i++){
-        if(elems[i].children[numColl].className == ''){
-            result.push('-');
-        }else{
-            result.push(elems[i].children[numColl].className);
-        }
-    }
-    return result;
-};
+        return reg.test(str);
+    };
 
-function getArrFromFirstDiago(numberRow, numberColl){
-    let arr     = [];
-    let result  = [];
-
-    for(let i = 0; i <= 20; i++){
-        if(field.querySelectorAll('tr')[numberRow] != undefined && field.querySelectorAll('tr')[numberRow].children[numberColl] != undefined){
-            arr.push(field.querySelectorAll('tr')[numberRow].children[numberColl]);
-            numberRow--;
-            numberColl++;
-        }
-    }
-
-    let firstElem   = arr[arr.length - 1];
-    let newNumCol   = Number(firstElem.dataset.numColl);
-    let newNumRow   = Number(firstElem.parentElement.dataset.numRow);
-    
-    for(let i = 0; i <= 30; i++){
-        if(field.querySelectorAll('tr')[newNumRow] != undefined && field.querySelectorAll('tr')[newNumRow].children[newNumCol] != undefined){
-            if(field.querySelectorAll('tr')[newNumRow].children[newNumCol].className == ''){
+    getArrFromGorizontal(elem){
+        let result  = [];
+        let elems   = elem.parentElement.children;
+        for(let i = 0; i < elems.length; i++){
+            if(elems[i].className == ''){
                 result.push('-');
             }else{
-                result.push(field.querySelectorAll('tr')[newNumRow].children[newNumCol].className);
+                result.push(elems[i].className);
             }
-
-            newNumRow++;
-            newNumCol--;
         }
-    }
+        return result;
+    };
 
-    return result;
-};
+    getArrFromVertical(parent, numColl){
+        let result  = [];
+        let elems   = parent.querySelectorAll('tr');
 
-function getArrFromSecondDiago(numberRow, numberColl){
-    let arr     = [];
-    let result  = [];
-    for(let i = 0; i <= 20; i++){
-        if(field.querySelectorAll('tr')[numberRow] != undefined && field.querySelectorAll('tr')[numberRow].children[numberColl] != undefined){
-            arr.push(field.querySelectorAll('tr')[numberRow].children[numberColl]);
-
-            numberRow--;
-            numberColl--;
-        }
-    }
-
-    let firstElem   = arr[arr.length - 1];
-    let newNumCol2   = Number(firstElem.dataset.numColl);
-    let newNumRow2   = Number(firstElem.parentElement.dataset.numRow);
-
-    for(let i = 0; i <= 30; i++){
-        if(field.querySelectorAll('tr')[newNumRow2] != undefined && field.querySelectorAll('tr')[newNumRow2].children[newNumCol2] != undefined){
-            if(field.querySelectorAll('tr')[newNumRow2].children[newNumCol2].className == ''){
+        for(let i = 0; i < elems.length; i++){
+            if(elems[i].children[numColl].className == ''){
                 result.push('-');
             }else{
-                result.push(field.querySelectorAll('tr')[newNumRow2].children[newNumCol2].className);
+                result.push(elems[i].children[numColl].className);
             }
-
-            newNumCol2++;
-            newNumRow2++;
         }
-    }
-    return result;
+        return result;
+    };
+
+    getArrFromFirstDiago(numberRow, numberColl){
+        let arr     = [];
+        let result  = [];
+
+        for(let i = 0; i <= 20; i++){
+            if(field.querySelectorAll('tr')[numberRow] != undefined && field.querySelectorAll('tr')[numberRow].children[numberColl] != undefined){
+                arr.push(field.querySelectorAll('tr')[numberRow].children[numberColl]);
+                numberRow--;
+                numberColl++;
+            }
+        }
+
+        let firstElem   = arr[arr.length - 1];
+        let newNumCol   = Number(firstElem.dataset.numColl);
+        let newNumRow   = Number(firstElem.parentElement.dataset.numRow);
+        
+        for(let i = 0; i <= 30; i++){
+            if(field.querySelectorAll('tr')[newNumRow] != undefined && field.querySelectorAll('tr')[newNumRow].children[newNumCol] != undefined){
+                if(field.querySelectorAll('tr')[newNumRow].children[newNumCol].className == ''){
+                    result.push('-');
+                }else{
+                    result.push(field.querySelectorAll('tr')[newNumRow].children[newNumCol].className);
+                }
+
+                newNumRow++;
+                newNumCol--;
+            }
+        }
+
+        return result;
+    };
+
+    getArrFromSecondDiago(numberRow, numberColl){
+        let arr     = [];
+        let result  = [];
+        for(let i = 0; i <= 20; i++){
+            if(field.querySelectorAll('tr')[numberRow] != undefined && field.querySelectorAll('tr')[numberRow].children[numberColl] != undefined){
+                arr.push(field.querySelectorAll('tr')[numberRow].children[numberColl]);
+
+                numberRow--;
+                numberColl--;
+            }
+        }
+
+        let firstElem    = arr[arr.length - 1];
+        let newNumCol2   = Number(firstElem.dataset.numColl);
+        let newNumRow2   = Number(firstElem.parentElement.dataset.numRow);
+
+        for(let i = 0; i <= 30; i++){
+            if(field.querySelectorAll('tr')[newNumRow2] != undefined && field.querySelectorAll('tr')[newNumRow2].children[newNumCol2] != undefined){
+                if(field.querySelectorAll('tr')[newNumRow2].children[newNumCol2].className == ''){
+                    result.push('-');
+                }else{
+                    result.push(field.querySelectorAll('tr')[newNumRow2].children[newNumCol2].className);
+                }
+
+                newNumCol2++;
+                newNumRow2++;
+            }
+        }
+        return result;
+    };
 };
+
+new Field(game, field, 30, 20);
